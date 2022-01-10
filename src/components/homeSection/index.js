@@ -6,7 +6,7 @@ import imgHomeSection from '../assets/images/imgHomeSection.jpg'
 const HomeSection = () => {
     const { t, i18n } = useTranslation();
     return (
-        <Grid container sx={{ background: '#1f2623', color: '#fff', padding: '50px' }}>
+        <Grid container sx={{ background: '#1f2623', color: '#fff', padding: '50px', pt: '100px' }}>
             <Grid item xs={12} md={7} sx={{ mr: { xs: '0px', md: '50px' }, mt: { xs: '20px', md: '50px' } }}>
                 <Typography id="home" sx={{ fontSize: { xs: '40px', md: '80px' }, fontWeight: '700', mb: '50px' }}>{t('headerHomeSection')}</Typography>
                 <Typography sx={{ fontWeight: '700', mb: '20px' }}>{t('descriptionHomeSection')}</Typography>

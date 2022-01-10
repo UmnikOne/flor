@@ -27,6 +27,9 @@ const Header = () => {
                 color: '#fff',
                 padding: '15px',
                 borderBottom: '0.5px solid #fff',
+                position: 'fixed',
+                top: '0px',
+                zIndex: 100
             }} justifyContent="space-between" >
                 <Grid item xs={3}>
                     <img width="50px" src={logo} />
