@@ -1,0 +1,20 @@
+const translationEn = {
+    home: 'Kaymite',
+    services: 'Services',
+    contact: 'Contact',
+    headerHomeSection: 'Target your successs',
+    descriptionHomeSection: 'Companies must be able to quickly readjust to economic, financial, technological and human issues in order to remain competitive. This requirement requires an ability to reinvent, set up and maintain an agile, efficient, innovative and engaging organization.',
+    descriptionHomeSection2: 'Kaymite supports you in creating added value by structuring and developing your organization and human capital.',
+    strategy: 'HR strategy',
+    Training: 'Training & Development',
+    Compensation: 'Compensation & Benefits',
+    Process: 'HR Audit & Process',
+    sector: 'Intervention sector',
+    Food: 'Food industry',
+    Insurance: 'Insurance / Financial / Real estate',
+    Energy: 'Energy',
+    Industry: 'Industry',
+    Media: 'Media / Technologies / Telecommunications',
+    Public: 'Public',
+}
+export default translationEn
