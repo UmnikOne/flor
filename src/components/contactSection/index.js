@@ -10,7 +10,7 @@ const ContactSection = () => {
     return (
         <Box sx={{ background: '#1f2623', color: '#fff', padding: { xs: '50px', md: '80px' } }}>
             <Typography id="contact" sx={{ fontSize: { xs: '40px', md: '80px' }, fontWeight: '700', mb: '50px', ml: { xs: '0px', md: '300px' } }}>{t('sector')}</Typography>
-            <Grid container spacing={2}>
+            <Grid container spacing={10}>
                 <Grid item xs={12} md={4}>
                     <img width="100%" height="80%" src={img5} />
                     <Typography sx={{ fontWeight: '700', mt: '10px' }}>{t('Food')}</Typography>

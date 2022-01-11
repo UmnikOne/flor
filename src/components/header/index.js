@@ -1,11 +1,16 @@
 import React from 'react'
-import { Grid, Box, Link, Popover } from '@mui/material';
+import { Grid, Box, Link, Popover, FormControlLabel, Radio, Typography, RadioGroup } from '@mui/material';
 import { useTranslation, changeLanguage } from 'react-i18next';
 import logo from '../assets/images/logo.png'
 import MenuIcon from '@mui/icons-material/Menu';
+import CheckIcon from '@mui/icons-material/Check';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const Header = () => {
     const { t, i18n } = useTranslation();
+    const [lang, setLang] = React.useState('en');
     const changeLang = (e) => {
+        console.log(e)
+        setLang(e.target.value)
         i18n.changeLanguage(e.target.value)
     }
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -20,6 +25,19 @@ const Header = () => {
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;
+
+    const [anchorElLang, setAnchorElLang] = React.useState(null);
+
+    const handleClickLang = (event) => {
+        setAnchorElLang(event.currentTarget);
+    };
+
+    const handleCloseLang = () => {
+        setAnchorElLang(null);
+    };
+
+    const openLang = Boolean(anchorElLang);
+    const idLang = openLang ? 'simple-popover' : undefined;
     return (
         <Box>
             <Grid container sx={{
@@ -79,10 +97,60 @@ const Header = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={3} sx={{ display: 'flex', justifyContent: "flex-end" }}>
-                    <select onChange={changeLang}>
+                    <Box
+                        sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
+                        aria-describedby={idLang}
+                        onClick={handleClickLang}>
+                        <Typography sx={{ fontSize: '15px', lineHeight: '30px', color: '#fff', mr: '2px' }}>
+                            {lang}
+                        </Typography>
+                        <KeyboardArrowDownIcon sx={{ fontSize: '30px' }} />
+                    </Box>
+                    <Popover
+                        sx={{ zIndex: '2222222', '.MuiPopover-paper': { boxShadow: '0px 10px 100px rgba(80, 88, 100, 0.07)', borderRadius: '20px', } }}
+                        id={idLang}
+                        open={openLang}
+                        anchorEl={anchorElLang}
+                        onClose={handleCloseLang}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'left',
+                        }}
+                    >
+                        <Box sx={{ padding: '15px', }}>
+                            <RadioGroup value={lang} onChange={(e) => {
+                                changeLang(e)
+                                setAnchorElLang(null)
+                            }}
+                                aria-label="position" name="position" defaultValue="top" sx={{ display: 'flex', alignItems: 'start' }}>
+                                <Box sx={{ display: 'flex', alignItems: 'center', padding: '10px 0px' }}>
+                                    <FormControlLabel
+                                        sx={{ '.MuiFormControlLabel-label': { color: lang === 'fr' ? '#EE9A8F' : '' } }}
+                                        value="top"
+                                        control={<Radio value="fr" sx={{ display: 'none' }} />}
+                                        label="Français"
+                                        labelPlacement="start"
+                                    />
+                                    {lang === 'fr' && <CheckIcon sx={{ fill: '#EE9A8F', ml: '30px' }} />}
+                                </Box>
+                                <Box sx={{ display: 'flex', alignItems: 'center', padding: '10px 0px' }}>
+                                    <FormControlLabel
+                                        sx={{ '.MuiFormControlLabel-label': { color: lang === 'en' ? '#EE9A8F' : '' } }}
+                                        value="start"
+                                        control={<Radio value="en" sx={{ display: 'none' }} />}
+                                        label="English"
+                                        labelPlacement="start"
+                                    />
+                                    {lang === 'en' && <CheckIcon sx={{ fill: '#EE9A8F', ml: '30px' }} />}
+                                </Box>
+                            </RadioGroup>
+                        </Box>
+                    </Popover>
+
+                    {/* <select onChange={changeLang}>
                         <option value="en">en</option>
                         <option value="fr">fr</option>
-                    </select>
+                    </select> */}
                 </Grid>
             </Grid>
         </Box >

@@ -7,7 +7,7 @@ import img2 from '../assets/images/img2.jpg'
 const ServiceSection = () => {
     const { t, i18n } = useTranslation();
     return (
-        <Box sx={{ background: '#1f2623', color: '#fff', padding: { xs: '50px', md: '80px' } }}>
+        <Box sx={{ background: '#1f2623', color: '#fff', padding: { xs: '50px', md: '80px' }, pt:{xs: '50px', md: '150px'} }}>
             <Typography id="service" sx={{ fontSize: { xs: '40px', md: '80px' }, fontWeight: '700', mb: '50px', ml: { xs: '0px', md: '300px' } }}>{t('services')}</Typography>
             <Grid container spacing={2}>
                 <Grid item xs={12} md={3}>
