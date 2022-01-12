@@ -16,5 +16,10 @@ const translationEn = {
     Industry: 'Industry',
     Media: 'Media / Technologies / Telecommunications',
     Public: 'Public',
+    email: 'Enter email',
+    title: 'Enter title',
+    description: 'Enter description',
+    email: 'Please enter a valid email',
+    Send: 'Send',
 }
 export default translationEn

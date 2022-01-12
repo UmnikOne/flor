@@ -1,5 +1,5 @@
 const translationFr = {
-    home: 'Home',
+    home: 'Kaymite',
     services: 'Prestations de service',
     contact: 'Contact',
     headerHomeSection: 'Ciblez votre succès',
@@ -16,5 +16,10 @@ const translationFr = {
     Industry: 'Industrie',
     Media: 'Médias / Technologies / Télécomunication',
     Public: 'Public',
+    email: "Entrez l'e-mail",
+    title: 'Entrez le titre',
+    description: 'Entrez la description',
+    email: 'Veuillez entrer un email valide',
+    Send: 'Envoyer',
 }
 export default translationFr

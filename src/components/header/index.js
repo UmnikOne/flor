@@ -39,7 +39,7 @@ const Header = () => {
     const openLang = Boolean(anchorElLang);
     const idLang = openLang ? 'simple-popover' : undefined;
     return (
-        <Box>
+        <Box sx={{fontFamily: "Karla', sans-serif"}}>
             <Grid container sx={{
                 background: '#1f2623',
                 color: '#fff',
@@ -101,7 +101,7 @@ const Header = () => {
                         sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
                         aria-describedby={idLang}
                         onClick={handleClickLang}>
-                        <Typography sx={{ fontSize: '15px', lineHeight: '30px', color: '#fff', mr: '2px' }}>
+                        <Typography className="app" sx={{ fontSize: '15px', lineHeight: '30px', color: '#fff', mr: '2px', textTransform: 'uppercase' }}>
                             {lang}
                         </Typography>
                         <KeyboardArrowDownIcon sx={{ fontSize: '30px' }} />
@@ -125,32 +125,29 @@ const Header = () => {
                                 aria-label="position" name="position" defaultValue="top" sx={{ display: 'flex', alignItems: 'start' }}>
                                 <Box sx={{ display: 'flex', alignItems: 'center', padding: '10px 0px' }}>
                                     <FormControlLabel
-                                        sx={{ '.MuiFormControlLabel-label': { color: lang === 'fr' ? '#EE9A8F' : '' } }}
+                                        className='app'
+                                        sx={{ '.MuiFormControlLabel-label': { color: lang === 'fr' ? '#a6296e' : '' } }}
                                         value="top"
                                         control={<Radio value="fr" sx={{ display: 'none' }} />}
                                         label="Français"
                                         labelPlacement="start"
                                     />
-                                    {lang === 'fr' && <CheckIcon sx={{ fill: '#EE9A8F', ml: '30px' }} />}
+                                    {lang === 'fr' && <CheckIcon sx={{ fill: '#a6296e', ml: '30px' }} />}
                                 </Box>
                                 <Box sx={{ display: 'flex', alignItems: 'center', padding: '10px 0px' }}>
                                     <FormControlLabel
-                                        sx={{ '.MuiFormControlLabel-label': { color: lang === 'en' ? '#EE9A8F' : '' } }}
+                                        className='app'
+                                        sx={{ '.MuiFormControlLabel-label': { color: lang === 'en' ? '#a6296e' : '' } }}
                                         value="start"
                                         control={<Radio value="en" sx={{ display: 'none' }} />}
                                         label="English"
                                         labelPlacement="start"
                                     />
-                                    {lang === 'en' && <CheckIcon sx={{ fill: '#EE9A8F', ml: '30px' }} />}
+                                    {lang === 'en' && <CheckIcon sx={{ fill: '#a6296e', ml: '30px' }} />}
                                 </Box>
                             </RadioGroup>
                         </Box>
                     </Popover>
-
-                    {/* <select onChange={changeLang}>
-                        <option value="en">en</option>
-                        <option value="fr">fr</option>
-                    </select> */}
                 </Grid>
             </Grid>
         </Box >

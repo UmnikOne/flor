@@ -5,6 +5,7 @@ import Header from '../header';
 import HomeSection from '../homeSection';
 import ServiceSection from '../serviceSection';
 import ContactSection from '../contactSection';
+import Footer from '../footer';
 const HomePage = () => {
     const { t, i18n } = useTranslation();
     const changeLang = (e) => {
@@ -16,6 +17,7 @@ const HomePage = () => {
             <HomeSection />
             <ServiceSection />
             <ContactSection />
+            <Footer />
         </Box>
     )
 }
