@@ -48,12 +48,12 @@ const Header = () => {
                 position: 'fixed',
                 top: '0px',
                 zIndex: 100
-            }} justifyContent="space-between" >
+            }} justifyContent="space-between" alignItems='center' >
                 <Grid item xs={3}>
                     <img width="50px" src={logo} />
                 </Grid>
                 <Grid item xs={6}>
-                    <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', fontSize: '20px' }}>
                         <Link href="/#home" sx={{ padding: '0px 20px', color: '#fff', textDecoration: 'none' }}>
                             {t('home')}
                         </Link>
@@ -101,7 +101,7 @@ const Header = () => {
                         sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}
                         aria-describedby={idLang}
                         onClick={handleClickLang}>
-                        <Typography className="app" sx={{ fontSize: '15px', lineHeight: '30px', color: '#fff', mr: '2px', textTransform: 'uppercase' }}>
+                        <Typography className="app" sx={{ fontSize: '15px', lineHeight: '30px', color: '#fff', mr: '2px', textTransform: 'uppercase', fontSize: '20px' }}>
                             {lang}
                         </Typography>
                         <KeyboardArrowDownIcon sx={{ fontSize: '30px' }} />
