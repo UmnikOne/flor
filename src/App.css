@@ -10,3 +10,6 @@
 .inputForm:focus-visible{
   outline: none !important;
 }
+.fontPlaceholder::placeholder{
+  font-family: 'Karla', sans-serif !important;
+}
