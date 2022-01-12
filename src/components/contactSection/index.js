@@ -63,7 +63,7 @@ const ContactSection = () => {
                     <Box mt={2} sx={{ width: { xs: '93%', md: '100%' } }}>
                         <textarea value={description} onChange={e => setDescription(e.target.value)} rows='5' className="inputForm fontPlaceholder" type="text" name="email" placeholder={t('description')}></textarea>
                     </Box>
-                    <Button sx={{ background: '#a6296e', color: '#fff', width: { xs: '100%', md: '20%' }, mt: '20px' }} onClick={handleSubmit}>{t('Send')}</Button>
+                    <Button className="app" sx={{ background: '#a6296e', color: '#fff', width: { xs: '100%', md: '20%' }, mt: '20px' }} onClick={handleSubmit}>{t('Send')}</Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <Box sx={{ color: '#fff', padding: { xs: '50px', md: '80px' }, textAlign: 'center' }}>
