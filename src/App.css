@@ -14,3 +14,21 @@
 .fontPlaceholder::placeholder{
   font-family: 'Karla', sans-serif !important;
 }
+.containerInput{
+  width: 100% !important;
+  border-radius: 10px !important;
+  padding: 10px 10px 10px 60px !important;
+  font-size: 12px !important;
+}
+.containerInput:focus{
+  border-color: #1f2623 !important;
+  box-shadow: none !important;
+}
+@media (max-width: 800px){
+  .containerInput{
+    width: 107% !important;
+  }
+  .widthTextArea{
+    width: 93% !important;
+  }
+}

@@ -21,5 +21,9 @@ const translationEn = {
     description: 'Enter description',
     email: 'Please enter a valid email',
     Send: 'Send',
+    Name: 'Name/First name',
+    Company: 'Company',
+    PhoneNumber: 'Phone number',
+    Country: 'Country',
 }
 export default translationEn
