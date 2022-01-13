@@ -3,6 +3,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import img1 from '../assets/images/img1.jpg'
 import img2 from '../assets/images/img2.jpg'
+import img3 from '../assets/images/img3.jpg'
 
 const ServiceSection = () => {
     const { t, i18n } = useTranslation();
@@ -19,7 +20,7 @@ const ServiceSection = () => {
                     <Typography className="app" sx={{ fontWeight: '700', mt: '10px' }}>{t('Training')}</Typography>
                 </Grid>
                 <Grid item xs={12} md={3}>
-                    <img width="100%" src={img2} />
+                    <img width="100%" src={img3} />
                     <Typography className="app" sx={{ fontWeight: '700', mt: '10px' }}>{t('Compensation')}</Typography>
                 </Grid>
                 <Grid item xs={12} md={3}>
