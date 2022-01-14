@@ -1,7 +1,8 @@
 import React from 'react'
 import { Grid, Box, Link, Popover, FormControlLabel, Radio, Typography, RadioGroup } from '@mui/material';
 import { useTranslation, changeLanguage } from 'react-i18next';
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logo.svg'
+import logo2 from '../assets/images/logo2.svg'
 import MenuIcon from '@mui/icons-material/Menu';
 import CheckIcon from '@mui/icons-material/Check';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -50,7 +51,7 @@ const Header = () => {
                 zIndex: 100
             }} justifyContent="space-between" alignItems='center' >
                 <Grid item xs={3}>
-                    <img width="50px" src={logo} />
+                    <Box><img width="50px" src={logo} /></Box>
                 </Grid>
                 <Grid item xs={6}>
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center', fontSize: '20px' }}>
