@@ -6,6 +6,9 @@ import HomeSection from '../homeSection';
 import ServiceSection from '../serviceSection';
 import ContactSection from '../contactSection';
 import Footer from '../footer';
+import WhyKaymite from '../whyKaymite';
+import Services from '../services';
+import OurSectors from '../ourSectors';
 const HomePage = () => {
     const { t, i18n } = useTranslation();
     const changeLang = (e) => {
@@ -14,9 +17,13 @@ const HomePage = () => {
     return (
         <Box>
             <Header />
-            <HomeSection />
+            {/* <HomeSection /> */}
             <ServiceSection />
+            <WhyKaymite/>
+            <Services/>
+            <OurSectors/>
             <ContactSection />
+            
             {/* <Footer /> */}
         </Box>
     )

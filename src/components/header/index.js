@@ -58,7 +58,7 @@ const Header = () => {
                         <Link href="/#home" sx={{ padding: '0px 20px', color: '#fff', textDecoration: 'none' }}>
                             {t('home')}
                         </Link>
-                        <Link href="/#service" sx={{ padding: '0px 20px', color: '#fff', textDecoration: 'none' }}>
+                        <Link href="/#services" sx={{ padding: '0px 20px', color: '#fff', textDecoration: 'none' }}>
                             {t('services')}
                         </Link>
                         <Link href="/#contact" sx={{ padding: '0px 20px', color: '#fff', textDecoration: 'none' }}>
