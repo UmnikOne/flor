@@ -24,6 +24,9 @@
   border-color: #1f2623 !important;
   box-shadow: none !important;
 }
+.btnDropdown{
+  color: black;
+}
 @media (max-width: 800px){
   .containerInput{
     width: 107% !important;
